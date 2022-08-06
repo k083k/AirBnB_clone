@@ -67,3 +67,5 @@ The test for the classes are in the [test_models](./tests/test_models/) folder.
 - **Kwabena Frempong-Kore** - [email] (kobekore@gmail.com) [github] (https://github.com/k083k/) [LinkedIn] (https://www.linkedin.com/in/kobekore/)
 *Sharpening my skills at ALX School of Software Engineering. I have a lifelong passion for programming with a background in Quantity Surveying.*
 
+- **Victor Bryan Kanyanga** - [email] (victorbrian4@gmail.com) [github] (https://github.com/VictorBK) [LinkedIn] (https://www.linkedin.com/in/victorkanyanga/)
+*Aiming at becoming a DevOps/SRE with ALX School of Software Engineering via Holberton being the vehicle to get me started on that journey. Picture this -> I am transitioning from Accounting and Finance to Tech.*
