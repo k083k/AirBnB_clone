@@ -60,26 +60,23 @@ class HBNBCommand(cmd.Cmd):
                 self.err_handler(2)
 
     def do_show(self, args):
-        """
-         Prints the string representation of an instance
-         based on the class name and id
-        """
+        """Usage: show BaseModel 1234-1234-1234"""
+        args = args.split()
         if len(args) == 0:
-            self.err_handler(1)
-        elif len(args) == 1:
-            self.err_handler(3)
-        else:
-            args = args.split()
-            if args[0] in self.allowed_classes:
-                models.storage.reload()
-# Create an identifier based on user input.
-                identifier = args[0] + "." + args[1]
-                if identifier in list(models.storage.all().keys()):
-                    print(models.storage.all()[identifier])
-                else:
-                    self.err_handler(4)
-            else:
-                self.err_handler(2)
+            print("** class name missing **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+        if args[0] not in HBNBCommand.valid_classes:
+            print("** class doesn't exist **")
+            return
+        all_objs = storage.all()
+        for objs_id in all_objs.keys():
+            if objs_id == args[1] and args[0] in str(type(all_objs[objs_id])):
+                print(all_objs[objs_id])
+                return
+        print("** no instance found **")
 
     def do_destroy(self, args):
         """
